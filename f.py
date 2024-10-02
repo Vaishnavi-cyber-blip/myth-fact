@@ -8,7 +8,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Initialize Groq client (replace with actual initialization)
-client = groq.Client(api_key="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")  # Replace with your actual API key
+groq_api_key = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=groq_api_key)  # Replace with your actual API key
 
 # Prompt to generate both myth and fact together
 myth_fact_prompt = (
