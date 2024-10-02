@@ -9,7 +9,7 @@ CORS(app)
 
 # Initialize Groq client (replace with actual initialization)
 groq_api_key = os.getenv("GROQ_API_KEY")
-client = Groq(api_key=groq_api_key)  # Replace with your actual API key
+client = Groq(api_key=groq_api_key)  
 
 # Prompt to generate both myth and fact together
 myth_fact_prompt = (
