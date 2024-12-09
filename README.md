@@ -2,10 +2,10 @@
 This Flask application generates common nutrition myths and their corresponding facts that debunk them. It uses Groq's LLaMA model(llama3-8b-8192) to generate myth-fact pairs and provides a RESTful API endpoint to access the results.
 
 ## Features
-  Flask Backend: Lightweight web server to handle requests.  
-  CORS Support: Enables cross-origin requests for secure frontend-backend communication.  
-  AI-Generated Content: Generates myth-fact pairs using Groq's LLaMA model.  
-  Data Cleaning: Extracts and formats the output to ensure clean and readable results.
+  **Flask Backend**: Lightweight web server to handle requests.  
+  **CORS Support**: Enables cross-origin requests for secure frontend-backend communication.  
+  **AI-Generated Content**: Generates myth-fact pairs using Groq's LLaMA model.  
+  **Data Cleaning**: Extracts and formats the output to ensure clean and readable results.
 
  ## Myth-Fact Generation Function
  
@@ -19,3 +19,8 @@ This Flask application generates common nutrition myths and their corresponding 
     myth, fact = clean_myth_fact(processed_text)
     return {"myth": myth, "fact": fact}
  ```
+Sends the prompt to Groq's LLaMA model.  
+Processes the AI response to extract the myth and fact pair.  
+Returns the result in a structured format.
+
+![myy](https://github.com/user-attachments/assets/edc58c88-099f-4e7c-b886-f73c180963c5)
