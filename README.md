@@ -23,4 +23,18 @@ Sends the prompt to Groq's LLaMA model.
 Processes the AI response to extract the myth and fact pair.  
 Returns the result in a structured format.
 
+## Prompt 
+``` myth_fact_prompt = (
+    "Provide a common myth related to nutrition and its corresponding fact that debunks it. "
+    "Write the myth first, labeled 'Myth:', and the fact immediately after, labeled 'Fact:'. "
+    "Both the myth and fact should be short, 1-2 sentences each."
+)
+```
+## Interface
+
+<p align="center">
+  <img src="![myy](https://github.com/user-attachments/assets/edc58c88-099f-4e7c-b886-f73c180963c5)" alt="Image Description" width="400"/>
+</p>
+
+
 ![myy](https://github.com/user-attachments/assets/edc58c88-099f-4e7c-b886-f73c180963c5)
