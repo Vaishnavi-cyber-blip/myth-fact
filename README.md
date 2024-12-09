@@ -32,9 +32,4 @@ Returns the result in a structured format.
 ```
 ## Interface
 
-<p align="center">
-  <img src="![myy](https://github.com/user-attachments/assets/edc58c88-099f-4e7c-b886-f73c180963c5)" alt="Image Description" width="400"/>
-</p>
-
-
 ![myy](https://github.com/user-attachments/assets/edc58c88-099f-4e7c-b886-f73c180963c5)
