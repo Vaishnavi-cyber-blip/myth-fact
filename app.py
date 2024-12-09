@@ -11,7 +11,7 @@ CORS(app)
 groq_api_key = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=groq_api_key)  
 
-# Prompt to generate both myth and fact together
+
 myth_fact_prompt = (
     "Provide a common myth related to nutrition and its corresponding fact that debunks it. "
     "Write the myth first, labeled 'Myth:', and the fact immediately after, labeled 'Fact:'. "
@@ -22,11 +22,11 @@ myth_fact_prompt = (
 
 def clean_myth_fact(text):
     """Extract and clean the myth and fact from the model response"""
-    # Use regex to capture the myth and fact based on their labels
+    
     myth_match = re.search(r"Myth:(.*?)(Fact:|$)", text, re.DOTALL)
     fact_match = re.search(r"Fact:(.*)", text, re.DOTALL)
 
-    # Extract and clean the myth and fact
+   
     myth = myth_match.group(1).strip() if myth_match else "Myth not found."
     fact = fact_match.group(1).strip() if fact_match else "Fact not found."
 
@@ -41,10 +41,10 @@ def generate_myth_fact_pair(prompt):
                 "content": prompt,
             }
         ],
-        model="llama3-8b-8192",  # Replace with the correct model
+        model="llama3-8b-8192", 
     )
 
-    # Get the processed text from the response
+    
     processed_text = chat_completion.choices[0].message.content
 
    
@@ -57,7 +57,7 @@ def generate_myth_fact_pair(prompt):
 def generate_myths_facts():
     myths_facts = []
 
-    # Generate 2 myth-fact pairs
+    
     while len(myths_facts) < 1:
         myth_fact = generate_myth_fact_pair(myth_fact_prompt)
         myths_facts.append(myth_fact)
